@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">New User Registrations</h5>
+
+    </div>
+    <div class="card-body">
+      
+      <table class="table">
+      
+        <tbody>
+          <tr *ngFor="let item of newUsers; let i = index"> 
+            <td>
+                <img src="{{item.picture}}">
+            </td>
+            <td>
+               <h6>{{item.name}}</h6>
+               <p> {{item.country}}</p>
+            </td>
+            <td style="width: 200px;">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar"  style="width: {{item.progress}}%" aria-valuenow="item.progress" aria-valuemin="0" aria-valuemax="100">{{item.progress}}%</div>
+                  </div>
+            </td>
+          
+            <td>
+               <button class="btn" [ngClass]="item.isActive == true ? 'btn-primary' : 'btn-secondary'">More</button>
+
+            </td>
+           
+
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+  </div>

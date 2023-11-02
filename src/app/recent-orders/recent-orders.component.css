@@ -1,0 +1,7 @@
+.card-body{
+    height: 405px;
+    overflow-y: scroll;
+}
+.card-header{
+    background: #fff;
+}
